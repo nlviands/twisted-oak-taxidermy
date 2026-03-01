@@ -1,0 +1,87 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const faqs = [
+  {
+    question: "How long does a mount take?",
+    answer: "Most mounts take 6 to 12 months. Turnaround depends on the type of mount and our current workload. We'll give you an estimate when you drop off your specimen. Rush service is available for an additional fee."
+  },
+  {
+    question: "How much does a deer shoulder mount cost?",
+    answer: "Whitetail shoulder mounts start at $550. Final price depends on the pose, form, and any custom details. We'll give you a firm quote when you bring it in."
+  },
+  {
+    question: "Do I need to cape the deer myself?",
+    answer: "No — but proper caping gives us the best material to work with. If you can make the ring cut behind the shoulders and up the back of the neck, that's ideal. If not, bring it to us whole (keep it cool) and we'll handle it. See our Field Care Guide for step-by-step instructions."
+  },
+  {
+    question: "What payment methods do you accept?",
+    answer: "Cash, credit/debit card (via Square), and cryptocurrency (Bitcoin, Ethereum, USDC via Coinbase Commerce). We require a 50% deposit at drop-off with the balance due at pickup."
+  },
+  {
+    question: "Do you accept specimens from out of the area?",
+    answer: "Yes. While we're based in Mount Airy, NC, we accept specimens from anywhere. Ship frozen specimens to us or arrange a drop-off. Contact us to coordinate."
+  },
+  {
+    question: "How should I store my specimen before bringing it in?",
+    answer: "Freeze it as soon as possible. For deer, fold the cape skin-to-skin, bag it, and freeze. For birds, smooth the feathers, wrap in a plastic bag with air squeezed out, and freeze. For fish, wrap in a wet towel, then bag and freeze. Check our Field Care Guide for detailed instructions."
+  },
+  {
+    question: "Do you do repairs or re-mounts?",
+    answer: "Yes. We can repair damaged mounts, re-mount specimens on new forms, and touch up older work. Bring it in or send us photos for a quote."
+  },
+  {
+    question: "Can I choose the pose for my mount?",
+    answer: "Absolutely. We'll discuss pose options when you drop off — upright, semi-sneak, full sneak, looking left or right, etc. We want your mount to look exactly how you envision it."
+  },
+  {
+    question: "Do you do tanning?",
+    answer: "Yes. We offer tanning services for deer, bear, and other hides. Contact us for pricing."
+  },
+  {
+    question: "Are you licensed?",
+    answer: "Yes. Austin is a licensed taxidermist in North Carolina, certified for both regular and avian (bird) taxidermy."
+  },
+];
+---
+
+<Layout title="FAQ | Twisted Oak Taxidermy" description="Frequently asked questions about taxidermy services, pricing, turnaround times, and more. Twisted Oak Taxidermy in Mount Airy, NC.">
+  <section class="py-12 md:py-20">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h1 class="font-heading text-4xl md:text-5xl font-bold text-charcoal text-center mb-4">
+        Frequently Asked Questions
+      </h1>
+      <p class="text-center text-earth mb-12">
+        Quick answers to the most common questions we get.
+      </p>
+
+      <div class="space-y-4">
+        {faqs.map((faq, i) => (
+          <details class="bg-white rounded-lg shadow-sm border border-gray-100 group" open={i === 0}>
+            <summary class="flex items-center justify-between p-6 cursor-pointer list-none font-heading text-lg font-semibold text-charcoal hover:text-tan-dark transition-colors">
+              {faq.question}
+              <svg class="w-5 h-5 shrink-0 ml-4 text-tan-dark group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </summary>
+            <div class="px-6 pb-6 text-earth leading-relaxed">
+              {faq.answer}
+            </div>
+          </details>
+        ))}
+      </div>
+
+      <!-- CTA -->
+      <div class="text-center mt-12">
+        <p class="text-earth mb-4">Don't see your question? We're happy to help.</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="tel:+13366486996" class="bg-tan hover:bg-tan-light text-charcoal px-6 py-3 rounded font-heading font-semibold tracking-wide transition-colors inline-flex items-center justify-center gap-2">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+            Call Us
+          </a>
+          <a href="/contact" class="border-2 border-charcoal text-charcoal hover:bg-charcoal hover:text-cream px-6 py-3 rounded font-heading font-semibold tracking-wide transition-colors inline-block">
+            Send a Message
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

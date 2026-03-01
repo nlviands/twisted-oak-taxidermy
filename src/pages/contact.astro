@@ -1,0 +1,91 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ContactForm from '../components/ContactForm.tsx';
+---
+
+<Layout title="Contact | Twisted Oak Taxidermy" description="Get a free quote or schedule a drop-off. Call (336) 648-6996 or fill out our contact form. Mount Airy, NC.">
+  <section class="py-12 md:py-20">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h1 class="font-heading text-4xl md:text-5xl font-bold text-charcoal text-center mb-4">
+        Contact Us
+      </h1>
+      <p class="text-center text-earth mb-12 max-w-2xl mx-auto">
+        Ready to get started? Give us a call or fill out the form below for a free quote.
+      </p>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <!-- Contact Info -->
+        <div class="space-y-8">
+          <!-- Phone -->
+          <div class="bg-white rounded-lg p-6 shadow-sm border border-gray-100">
+            <h2 class="font-heading text-xl font-semibold text-charcoal mb-4">Give Us a Call</h2>
+            <a href="tel:+13366486996" class="text-2xl font-heading font-bold text-tan-dark hover:text-tan transition-colors">
+              (336) 648-6996
+            </a>
+            <p class="text-earth text-sm mt-2">Call or text anytime. If we can't answer, leave a message and we'll get back to you.</p>
+          </div>
+
+          <!-- Hours -->
+          <div class="bg-white rounded-lg p-6 shadow-sm border border-gray-100">
+            <h2 class="font-heading text-xl font-semibold text-charcoal mb-4">Hours</h2>
+            <div class="space-y-2 text-earth">
+              <div class="flex justify-between">
+                <span>Monday - Friday</span>
+                <span class="font-medium">8:00 AM - 6:00 PM</span>
+              </div>
+              <div class="flex justify-between">
+                <span>Saturday</span>
+                <span class="font-medium">8:00 AM - 6:00 PM</span>
+              </div>
+              <div class="flex justify-between">
+                <span>Sunday</span>
+                <span class="font-medium">By appointment</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Location -->
+          <div class="bg-white rounded-lg p-6 shadow-sm border border-gray-100">
+            <h2 class="font-heading text-xl font-semibold text-charcoal mb-4">Location</h2>
+            <p class="text-earth mb-2">Mount Airy, North Carolina</p>
+            <p class="text-earth text-sm">
+              Serving Mount Airy, Pilot Mountain, King, Elkin, Dobson, Surry County, and parts of Virginia
+              (Stuart, Galax). We also accept shipped specimens from anywhere.
+            </p>
+          </div>
+
+          <!-- Drop-off Info -->
+          <div class="bg-tan/10 border border-tan/30 rounded-lg p-6">
+            <h2 class="font-heading text-xl font-semibold text-charcoal mb-3">Dropping Off a Specimen?</h2>
+            <ul class="space-y-2 text-earth text-sm">
+              <li class="flex items-start gap-2">
+                <svg class="w-4 h-4 text-tan-dark mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                Bring your specimen frozen or on ice
+              </li>
+              <li class="flex items-start gap-2">
+                <svg class="w-4 h-4 text-tan-dark mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                50% deposit required at drop-off (cash or card)
+              </li>
+              <li class="flex items-start gap-2">
+                <svg class="w-4 h-4 text-tan-dark mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                We'll discuss pose, form, and finish options on the spot
+              </li>
+              <li class="flex items-start gap-2">
+                <svg class="w-4 h-4 text-tan-dark mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                Call ahead for an appointment if possible
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div>
+          <div class="bg-white rounded-lg p-6 md:p-8 shadow-sm border border-gray-100">
+            <h2 class="font-heading text-xl font-semibold text-charcoal mb-6">Request a Quote</h2>
+            <ContactForm client:load />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

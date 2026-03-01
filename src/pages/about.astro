@@ -1,0 +1,65 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="About | Twisted Oak Taxidermy" description="Meet Austin, the taxidermist behind Twisted Oak Taxidermy in Mount Airy, NC. Licensed for regular and avian taxidermy.">
+  <section class="py-12 md:py-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h1 class="font-heading text-4xl md:text-5xl font-bold text-charcoal text-center mb-12">
+        About Twisted Oak
+      </h1>
+
+      <div class="prose-custom space-y-8">
+        <div class="bg-white rounded-lg p-8 shadow-sm border border-gray-100">
+          <h2 class="font-heading text-2xl font-bold text-charcoal mb-4">The Taxidermist</h2>
+          <p class="text-earth leading-relaxed mb-4">
+            Twisted Oak Taxidermy is run by Austin, a licensed taxidermist based in Mount Airy, North Carolina.
+            Licensed for both regular and avian taxidermy, Austin brings a hands-on, detail-oriented approach
+            to every piece that comes through the shop.
+          </p>
+          <p class="text-earth leading-relaxed mb-4">
+            What started as a passion for the outdoors turned into a craft — and then a business. Every mount
+            that leaves Twisted Oak is built to last and designed to capture the moment your trophy was taken.
+          </p>
+          <p class="text-earth leading-relaxed">
+            Austin is also an entrepreneur at heart, always looking for ways to grow and serve the community.
+            When he's not in the shop, you'll find him outdoors, working with his hands, or helping other small
+            businesses get off the ground.
+          </p>
+        </div>
+
+        <div class="bg-white rounded-lg p-8 shadow-sm border border-gray-100">
+          <h2 class="font-heading text-2xl font-bold text-charcoal mb-4">Why "Twisted Oak"?</h2>
+          <p class="text-earth leading-relaxed">
+            The name comes from the character of the land here in Surry County — old oak trees shaped by
+            wind and time, still standing strong. That's the spirit behind the work: natural, rugged, built to last.
+          </p>
+        </div>
+
+        <div class="bg-white rounded-lg p-8 shadow-sm border border-gray-100">
+          <h2 class="font-heading text-2xl font-bold text-charcoal mb-4">Service Area</h2>
+          <p class="text-earth leading-relaxed mb-4">
+            Based in Mount Airy, NC, we serve hunters and outdoor enthusiasts across the region:
+          </p>
+          <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+            {["Mount Airy, NC", "Pilot Mountain, NC", "King, NC", "Elkin, NC", "Dobson, NC", "Surry County, NC", "Stuart, VA", "Galax, VA"].map((area) => (
+              <div class="bg-cream rounded px-3 py-2 text-sm text-earth-dark text-center">
+                {area}
+              </div>
+            ))}
+          </div>
+          <p class="text-earth text-sm mt-4">
+            Don't see your area? We accept specimens from anywhere. Shipping and long-distance drop-off available — <a href="/contact" class="text-tan-dark hover:text-tan underline">contact us</a> for details.
+          </p>
+        </div>
+
+        <!-- CTA -->
+        <div class="text-center py-8">
+          <a href="/contact" class="bg-charcoal hover:bg-charcoal-light text-cream px-8 py-3 rounded font-heading font-semibold tracking-wide transition-colors inline-block">
+            Get in Touch
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

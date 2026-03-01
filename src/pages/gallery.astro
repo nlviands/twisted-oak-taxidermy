@@ -1,0 +1,77 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Gallery from '../components/Gallery.tsx';
+
+// Import all images from the gallery folder
+const galleryImages = import.meta.glob<{ default: ImageMetadata }>('../images/gallery/*.{jpg,jpeg,png,webp}');
+
+const images: { src: string; alt: string; category: string }[] = [];
+
+for (const [path, resolver] of Object.entries(galleryImages)) {
+  const img = await resolver();
+  const filename = path.split('/').pop()?.replace(/\.[^.]+$/, '') || '';
+  // Derive category from filename prefix (e.g., "deer-shoulder-01" -> "Deer")
+  const prefix = filename.split('-')[0]?.toLowerCase() || 'other';
+  const categoryMap: Record<string, string> = {
+    deer: 'Deer',
+    buck: 'Deer',
+    whitetail: 'Deer',
+    duck: 'Birds & Waterfowl',
+    goose: 'Birds & Waterfowl',
+    turkey: 'Birds & Waterfowl',
+    bird: 'Birds & Waterfowl',
+    fish: 'Fish',
+    bass: 'Fish',
+    trout: 'Fish',
+    european: 'European Mounts',
+    skull: 'European Mounts',
+    full: 'Full Body',
+    base: 'Custom Bases',
+    custom: 'Custom Bases',
+  };
+  images.push({
+    src: img.default.src,
+    alt: filename.replace(/-/g, ' ').replace(/\d+/g, '').trim(),
+    category: categoryMap[prefix] || 'Other',
+  });
+}
+---
+
+<Layout title="Gallery | Twisted Oak Taxidermy" description="Browse our gallery of professional taxidermy work. Deer mounts, bird mounts, fish, European skulls, and custom pieces from Mount Airy, NC.">
+  <section class="py-12 md:py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h1 class="font-heading text-4xl md:text-5xl font-bold text-charcoal text-center mb-4">
+        Gallery
+      </h1>
+      <p class="text-center text-earth mb-12 max-w-2xl mx-auto">
+        Browse our recent work. Each piece is crafted with care and attention to detail.
+      </p>
+
+      {images.length > 0 ? (
+        <Gallery images={images} client:load />
+      ) : (
+        <div class="text-center py-20">
+          <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 max-w-4xl mx-auto">
+            {[...Array(8)].map(() => (
+              <div class="aspect-square bg-gray-200 rounded-lg flex items-center justify-center text-gray-400">
+                <span class="text-sm">Coming soon</span>
+              </div>
+            ))}
+          </div>
+          <p class="text-earth mt-8">Photos coming soon. Check back shortly!</p>
+        </div>
+      )}
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-12 bg-charcoal text-cream text-center">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="font-heading text-2xl md:text-3xl font-bold text-tan mb-4">Like What You See?</h2>
+      <p class="text-gray-300 mb-6">Let us bring your next trophy to life.</p>
+      <a href="/contact" class="bg-tan hover:bg-tan-light text-charcoal px-8 py-3 rounded font-heading font-semibold tracking-wide transition-colors inline-block">
+        Get a Free Quote
+      </a>
+    </div>
+  </section>
+</Layout>
