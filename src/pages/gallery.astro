@@ -3,7 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import Gallery from '../components/Gallery.tsx';
 
 // Import all images from the gallery folder
-const galleryImages = import.meta.glob<{ default: ImageMetadata }>('../images/gallery/*.{jpg,jpeg,png,webp}');
+const galleryImages = import.meta.glob<{ default: ImageMetadata }>('../images/gallery/*.{jpg,jpeg,png,webp,JPG,JPEG,PNG}');
 
 const images: { src: string; alt: string; category: string }[] = [];
 
