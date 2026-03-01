@@ -31,7 +31,7 @@ for (const [path, resolver] of Object.entries(galleryImages)) {
   };
   images.push({
     src: img.default.src,
-    alt: filename.replace(/-/g, ' ').replace(/\d+/g, '').trim(),
+    alt: filename.replace(/-/g, ' ').replace(/\d+/g, '').trim().replace(/\b\w/g, (c) => c.toUpperCase()),
     category: categoryMap[prefix] || 'Other',
   });
 }
