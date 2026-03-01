@@ -7,7 +7,7 @@ interface Props {
   image?: string;
 }
 
-const { title, description = "Professional taxidermy services in Mount Airy, NC. Quality shoulder mounts, full body mounts, European skulls, birds, and fish. Serving Surry County and surrounding areas.", image = "/logo.png" } = Astro.props;
+const { title, description = "Professional taxidermy services in Mount Airy, NC. Quality shoulder mounts, full body mounts, European skulls, birds, and fish. Serving Surry County and surrounding areas.", image = "/logo.jpg" } = Astro.props;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
 const jsonLd = {
@@ -17,7 +17,7 @@ const jsonLd = {
   "description": "Professional taxidermy services in Mount Airy, North Carolina",
   "telephone": "+1-336-648-6996",
   "url": "https://twistedoaktaxidermy.com",
-  "image": "https://twistedoaktaxidermy.com/logo.png",
+  "image": "https://twistedoaktaxidermy.com/logo.jpg",
   "address": {
     "@type": "PostalAddress",
     "addressLocality": "Mount Airy",
@@ -40,7 +40,7 @@ const jsonLd = {
     <meta name="description" content={description} />
     <meta name="generator" content={Astro.generator} />
     <link rel="canonical" href={canonicalURL} />
-    <link rel="icon" type="image/png" href="/logo.png" />
+    <link rel="icon" type="image/png" href="/logo.jpg" />
 
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
@@ -67,7 +67,7 @@ const jsonLd = {
         <div class="flex items-center justify-between h-16 md:h-20">
           <!-- Logo -->
           <a href="/" class="flex items-center gap-3 shrink-0">
-            <img src="/logo.png" alt="Twisted Oak Taxidermy" class="h-10 md:h-14 w-auto" />
+            <img src="/logo.jpg" alt="Twisted Oak Taxidermy" class="h-10 md:h-14 w-auto" />
             <span class="font-heading text-lg md:text-xl font-bold text-tan tracking-wide hidden sm:block">
               Twisted Oak Taxidermy
             </span>
@@ -123,7 +123,7 @@ const jsonLd = {
           <!-- Business Info -->
           <div>
             <div class="flex items-center gap-3 mb-4">
-              <img src="/logo.png" alt="Twisted Oak Taxidermy" class="h-10 w-auto" />
+              <img src="/logo.jpg" alt="Twisted Oak Taxidermy" class="h-10 w-auto" />
               <span class="font-heading text-xl font-bold text-tan">Twisted Oak Taxidermy</span>
             </div>
             <p class="text-sm text-gray-400 leading-relaxed">
