@@ -147,15 +147,15 @@ export default function ContactForm() {
           className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#C4A265] focus:border-[#C4A265] outline-none transition-colors bg-white"
         >
           <option value="">Select a mount type</option>
-          <option value="shoulder">Shoulder Mount</option>
-          <option value="european">European Skull</option>
-          <option value="full-body">Full Body Mount</option>
-          <option value="bird">Bird / Waterfowl</option>
-          <option value="fish-skin">Fish (Skin Mount)</option>
-          <option value="fish-repro">Fish (Reproduction)</option>
-          <option value="rug">Rug Mount</option>
-          <option value="antler-plaque">Antler Plaque</option>
-          <option value="turkey-fan">Turkey Fan & Beard</option>
+          <option value="shoulder">Deer Shoulder Mount</option>
+          <option value="wall-pedestal">Deer Wall Pedestal Mount</option>
+          <option value="european">European Skull Mount</option>
+          <option value="predator-shoulder">Predator Shoulder Mount</option>
+          <option value="predator-lifesize">Predator Life-Size (Coyote/Bobcat/Fox)</option>
+          <option value="duck">Duck Mount</option>
+          <option value="turkey">Turkey Mount</option>
+          <option value="turkey-plaque">Turkey Trophy Plaque</option>
+          <option value="small-game">Small Game</option>
           <option value="custom">Custom / Other</option>
         </select>
       </div>

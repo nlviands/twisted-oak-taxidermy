@@ -7,14 +7,14 @@ interface Props {
   image?: string;
 }
 
-const { title, description = "Professional taxidermy services in Mount Airy, NC. Quality shoulder mounts, full body mounts, European skulls, birds, and fish. Serving Surry County and surrounding areas.", image = "/logo.jpg" } = Astro.props;
+const { title, description = "Professional wildlife taxidermy in Mount Airy, NC. Deer, predator, bird, and small game mounts. Local taxidermist serving Surry County NC and surrounding areas.", image = "/logo.jpg" } = Astro.props;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   "name": "Twisted Oak Taxidermy",
-  "description": "Professional taxidermy services in Mount Airy, North Carolina",
+  "description": "Professional wildlife taxidermy in Mount Airy, North Carolina. Deer taxidermy, predator mounts, bird taxidermy, and small game. Local taxidermist near Mount Airy, Surry County NC.",
   "telephone": "+1-336-648-6996",
   "url": "https://twistedoaktaxidermy.com",
   "image": "https://twistedoaktaxidermy.com/logo.jpg",
@@ -127,8 +127,8 @@ const jsonLd = {
               <span class="font-heading text-xl font-bold text-tan">Twisted Oak Taxidermy</span>
             </div>
             <p class="text-sm text-gray-400 leading-relaxed">
-              Professional taxidermy services in Mount Airy, North Carolina.
-              Preserving your memories with quality craftsmanship.
+              Professional wildlife taxidermy in Mount Airy, North Carolina.
+              Specializing in deer, predators, birds, and small game mounts with quality craftsmanship.
             </p>
           </div>
 
